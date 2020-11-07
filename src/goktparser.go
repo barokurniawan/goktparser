@@ -83,9 +83,11 @@ func (gkp *GoKtParser) ParseNIK(nik string) *entity.Output {
 
 		fmt.Println(province, city, district, date, month, year, uniqueNum)
 		output = &entity.Output{
-			Province: gkp.GetProvince(province),
-			City:     gkp.GetCity(city),
-			District: gkp.GetDistrict(district),
+			Province:  gkp.GetProvince(province),
+			City:      gkp.GetCity(city),
+			District:  gkp.GetDistrict(district),
+			BirthDate: fmt.Sprintf("%s-%s-%s", year, month, date),
+			UniqueID:  uniqueNum,
 		}
 
 	}

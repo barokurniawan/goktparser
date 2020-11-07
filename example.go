@@ -9,7 +9,7 @@ import (
 
 func main() {
 	Ktparser := src.NewKtparser()
-	output := Ktparser.ParseNIK("3204110609970001")
+	output := Ktparser.ParseNIK("1275010609970001")
 
 	jsonOutput, err := json.Marshal(output)
 	if err != nil {
